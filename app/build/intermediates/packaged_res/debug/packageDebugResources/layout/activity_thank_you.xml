@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/background_dark">
+
+    <!-- LEFT: Hasdrubal branding -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="35"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/bg_card"
+        android:padding="32dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_hasdrubal_logo"
+            android:contentDescription="Hasdrubal Logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hotel_name"
+            android:textColor="@color/gold"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hotel_location"
+            android:textColor="@color/hasdrubal_blue_light"
+            android:textSize="12sp"
+            android:textAllCaps="true"
+            android:letterSpacing="0.15"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divider" />
+
+    <!-- RIGHT: Thank you message -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="48dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓"
+            android:textColor="@color/gold"
+            android:textSize="72sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thank You!"
+            android:textColor="@color/white"
+            android:textSize="44sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your satisfaction is our priority."
+            android:textColor="@color/gold"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:fontFamily="serif"
+            android:layout_marginTop="8dp" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your feedback has been recorded.\nWe hope to welcome you again soon."
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This window will close automatically in 5 seconds..."
+            android:textColor="@color/skip_color"
+            android:textSize="13sp"
+            android:layout_marginTop="36dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

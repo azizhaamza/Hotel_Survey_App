@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Hasdrubal Thalassa brand colors -->
+    <color name="background_dark">#0A1628</color>
+    <color name="bg_card">#0F2040</color>
+    <color name="hasdrubal_blue">#1B4F82</color>
+    <color name="hasdrubal_blue_light">#3A7BC8</color>
+    <color name="gold">#C4A44D</color>
+    <color name="gold_light">#E8C870</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_secondary">#7A9BB5</color>
+    <color name="star_filled">#C4A44D</color>
+    <color name="star_empty">#1E3A5A</color>
+    <color name="divider">#1B3A6B</color>
+    <color name="skip_color">#4A6A8A</color>
+</resources>

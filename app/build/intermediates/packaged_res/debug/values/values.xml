@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_dark">#1A1A2E</color>
+    <color name="gold">#C9A84C</color>
+    <color name="star_empty">#444444</color>
+    <color name="star_filled">#FFD700</color>
+    <color name="text_secondary">#AAAAAA</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">Hotel Survey</string>
+    <string name="hotel_name">Grand Hotel</string>
+    <style name="Theme.HotelSurvey" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+        <item name="colorPrimary">@color/gold</item>
+        <item name="colorPrimaryDark">@color/background_dark</item>
+        <item name="colorAccent">@color/gold</item>
+    </style>
+</resources>

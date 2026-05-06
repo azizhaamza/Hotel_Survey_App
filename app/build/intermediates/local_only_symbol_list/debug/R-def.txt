@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+color background_dark
+color gold
+color star_empty
+color star_filled
+color text_secondary
+color white
+id btn_start
+id progress_bar
+id star1
+id star2
+id star3
+id star4
+id star5
+id tv_hint
+id tv_question
+id tv_question_number
+id tv_rating_label
+layout activity_survey
+layout activity_thank_you
+layout activity_welcome
+string app_name
+string hotel_name
+style Theme.HotelSurvey

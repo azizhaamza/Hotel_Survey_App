@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Landscape 2-column welcome screen -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/background_dark">
+
+    <!-- LEFT PANEL — hotel branding (35%) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="35"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/bg_card"
+        android:padding="32dp">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/ic_hasdrubal_logo"
+            android:contentDescription="Hasdrubal Logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hotel_name"
+            android:textColor="@color/gold"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hotel_location"
+            android:textColor="@color/hasdrubal_blue_light"
+            android:textSize="13sp"
+            android:textAllCaps="true"
+            android:letterSpacing="0.15"
+            android:layout_marginTop="4dp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:background="@color/gold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guest Satisfaction\nSurvey"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp" />
+
+    </LinearLayout>
+
+    <!-- VERTICAL DIVIDER -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/divider" />
+
+    <!-- RIGHT PANEL — welcome message + start button (65%) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="48dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:fontFamily="serif" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your satisfaction is our priority."
+            android:textColor="@color/gold"
+            android:textSize="18sp"
+            android:fontFamily="serif"
+            android:textStyle="italic"
+            android:layout_marginTop="8dp" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We would appreciate a few minutes of your time\nto rate your experience at our hotel."
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp" />
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="260dp"
+            android:layout_height="58dp"
+            android:text="Press OK to Start"
+            android:textSize="17sp"
+            android:textColor="@color/background_dark"
+            android:backgroundTint="@color/gold"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use ◄ ► to navigate  |  OK to confirm  |  ↑ to skip"
+            android:textColor="@color/skip_color"
+            android:textSize="13sp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
