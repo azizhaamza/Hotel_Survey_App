@@ -8,8 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ApiClient {
 
-    // TODO: Remplacez par l'URL de votre serveur
-    public static final String BASE_URL = "http://YOUR_SERVER_IP:8000/api/";
+    public static final String BASE_URL = "http://51.83.40.138/api_survey/";
 
     private static Retrofit retrofit;
 
@@ -20,8 +19,8 @@ public class ApiClient {
 
             OkHttpClient client = new OkHttpClient.Builder()
                     .addInterceptor(logging)
-                    .connectTimeout(10, TimeUnit.SECONDS)
-                    .readTimeout(10, TimeUnit.SECONDS)
+                    .connectTimeout(15, TimeUnit.SECONDS)
+                    .readTimeout(15, TimeUnit.SECONDS)
                     .build();
 
             retrofit = new Retrofit.Builder()

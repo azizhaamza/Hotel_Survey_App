@@ -2,25 +2,19 @@ package com.hotel.survey;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.hotel.survey.api.ApiClient;
-import com.hotel.survey.model.Question;
-import com.hotel.survey.model.QuestionResponse;
+import com.hotel.survey.api.SubmitResponse;
+import com.hotel.survey.model.GuestInfo;
 import com.hotel.survey.model.SurveyResult;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-import java.util.TimeZone;
+import com.hotel.survey.utils.DeviceUtils;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -28,103 +22,81 @@ import retrofit2.Response;
 
 public class SurveyActivity extends AppCompatActivity {
 
-    private static final String[] LABELS = {"", "Inadequate", "Average", "Good", "Very Good", "Excellent"};
+    public static final String EXTRA_GUEST = "extra_guest";
 
-    private List<Question> questions;
+    private static final String[] RATING_LABELS =
+            {"", "Inadequate", "Average", "Good", "Very Good", "Excellent"};
+
+    // 5 hardcoded questions per CDC v0.4
+    private static final String[] CATEGORIES =
+            {"YOUR ROOM", "FRONT DESK", "BREAKFAST", "SPA CENTER", "OVERALL STAY"};
+    private static final String[] QUESTIONS = {
+            "How do you rate your room?",
+            "How do you rate the reception?",
+            "How do you rate the breakfast?",
+            "How do you rate the Spa Center?",
+            "How do you rate your overall stay?"
+    };
+    private static final int TOTAL = 5;
+
     private int currentIndex = 0;
     private int currentRating = 0;
+    private final int[] ratings  = new int[TOTAL]; // 0 = not rated
+    private final int[] skipped  = new int[TOTAL]; // 1 = skipped
 
+    private GuestInfo guest;
+
+    private TextView tvGuestHeader;
     private TextView tvQuestionNumber;
+    private ProgressBar progressBar;
     private TextView tvCategory;
-    private TextView tvSubcategory;
     private TextView tvQuestion;
     private TextView tvRatingLabel;
     private TextView tvHint;
-    private ProgressBar progressBar;
     private TextView[] stars;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey);
-        initQuestions();
-        initViews();
-        showQuestion(0);
-    }
 
-    private void initQuestions() {
-        questions = Arrays.asList(
-            // Room & Reception
-            new Question(1,  "YOUR ROOM",     null,              "How do you rate your room?"),
-            new Question(2,  "FRONT DESK",    null,              "How do you rate the reception?"),
+        guest = (GuestInfo) getIntent().getSerializableExtra(EXTRA_GUEST);
 
-            // Breakfast
-            new Question(3,  "LA TOPAZE",     "Breakfast",       "Quality of the breakfast buffet"),
-            new Question(4,  "LA TOPAZE",     "Breakfast",       "Service"),
-
-            // Restaurants
-            new Question(5,  "IL DELFINO",    "Restaurant",      "Quality of meals"),
-            new Question(6,  "IL DELFINO",    "Restaurant",      "Service"),
-            new Question(7,  "LE GOURMET",    "Restaurant",      "Quality of meals"),
-            new Question(8,  "LE GOURMET",    "Restaurant",      "Service"),
-            new Question(9,  "L'OLIVIER",     "Restaurant",      "Quality of meals"),
-            new Question(10, "L'OLIVIER",     "Restaurant",      "Service"),
-            new Question(11, "LE VENUS",      "Restaurant",      "Quality of meals"),
-            new Question(12, "LE VENUS",      "Restaurant",      "Service"),
-
-            // Bars & Other
-            new Question(13, "LA CASCADE",    null,              "How do you rate La Cascade?"),
-            new Question(14, "LA BRISE",      null,              "How do you rate La Brise?"),
-            new Question(15, "LOBBY BAR",     null,              "How do you rate the Lobby Bar?"),
-            new Question(16, "ROOM SERVICE",  null,              "How do you rate the Room Service?"),
-
-            // Spa & Services
-            new Question(17, "SPA CENTER",    "Thalassotherapy", "Quality of welcome"),
-            new Question(18, "SPA CENTER",    "Thalassotherapy", "Quality of treatments"),
-            new Question(19, "LAUNDRY",       null,              "How do you rate the Laundry service?"),
-
-            // Overall
-            new Question(20, "OVERALL STAY",  null,              "How do you rate your overall stay?")
-        );
-    }
-
-    private void initViews() {
+        tvGuestHeader    = findViewById(R.id.tv_guest_header);
         tvQuestionNumber = findViewById(R.id.tv_question_number);
+        progressBar      = findViewById(R.id.progress_bar);
         tvCategory       = findViewById(R.id.tv_category);
-        tvSubcategory    = findViewById(R.id.tv_subcategory);
         tvQuestion       = findViewById(R.id.tv_question);
         tvRatingLabel    = findViewById(R.id.tv_rating_label);
         tvHint           = findViewById(R.id.tv_hint);
-        progressBar      = findViewById(R.id.progress_bar);
 
         stars = new TextView[]{
             findViewById(R.id.star1), findViewById(R.id.star2), findViewById(R.id.star3),
             findViewById(R.id.star4), findViewById(R.id.star5)
         };
+
+        if (guest != null && guest.found) {
+            String name = guest.getDisplayName();
+            String room = guest.num_chambre != null ? guest.num_chambre : "";
+            String header = name.isEmpty() ? "Room " + room : name + "  —  Room " + room;
+            tvGuestHeader.setText(header);
+        }
+
+        progressBar.setMax(TOTAL * 100);
+        showQuestion(0);
     }
 
     private void showQuestion(int index) {
-        Question q = questions.get(index);
-        currentRating = q.getRating();
+        //currentRating = 0;
+        currentRating = ratings[index];
 
-        tvQuestionNumber.setText((index + 1) + " / " + questions.size());
-        progressBar.setMax(questions.size());
-        progressBar.setProgress(index + 1);
+        tvQuestionNumber.setText((index + 1) + " / " + TOTAL);
+        progressBar.setProgress((index) * 100);
+        tvCategory.setText(CATEGORIES[index]);
+        tvQuestion.setText(QUESTIONS[index]);
 
-        tvCategory.setText(q.getCategory());
-
-        if (q.getSubcategory() != null) {
-            tvSubcategory.setText(q.getSubcategory());
-            tvSubcategory.setVisibility(View.VISIBLE);
-        } else {
-            tvSubcategory.setVisibility(View.GONE);
-        }
-
-        tvQuestion.setText(q.getText());
-
-        boolean isLast = (index == questions.size() - 1);
-        String action = isLast ? "OK → submit" : "OK → next";
-        tvHint.setText("◄ ► select rating   |   " + action + "   |   ↑ skip");
+        boolean isLast = (index == TOTAL - 1);
+        tvHint.setText("◄ ► select rating   |   " + (isLast ? "OK → submit" : "OK → next") + "   |   ↑ skip");
 
         updateStars();
     }
@@ -133,15 +105,15 @@ public class SurveyActivity extends AppCompatActivity {
         for (int i = 0; i < 5; i++) {
             boolean filled = i < currentRating;
             stars[i].setText(filled ? "★" : "☆");
-            stars[i].setTextColor(getResources().getColor(
-                filled ? R.color.star_filled : R.color.star_empty, null));
+            stars[i].setTextColor(ContextCompat.getColor(this,
+                filled ? R.color.star_filled : R.color.star_empty));
         }
         if (currentRating == 0) {
-            tvRatingLabel.setText("Not yet rated — press ↑ to skip");
-            tvRatingLabel.setTextColor(getResources().getColor(R.color.skip_color, null));
+            tvRatingLabel.setText("Press ↑ to skip");
+            tvRatingLabel.setTextColor(ContextCompat.getColor(this, R.color.skip_color));
         } else {
-            tvRatingLabel.setText(LABELS[currentRating]);
-            tvRatingLabel.setTextColor(getResources().getColor(R.color.gold, null));
+            tvRatingLabel.setText(RATING_LABELS[currentRating]);
+            tvRatingLabel.setTextColor(ContextCompat.getColor(this, R.color.gold));
         }
     }
 
@@ -160,36 +132,49 @@ public class SurveyActivity extends AppCompatActivity {
                 return true;
 
             case KeyEvent.KEYCODE_DPAD_UP:
-                // Skip this question (not applicable)
-                saveAndAdvance(0);
+                confirmAndAdvance(0, 1);
                 return true;
 
             case KeyEvent.KEYCODE_DPAD_CENTER:
             case KeyEvent.KEYCODE_ENTER:
                 if (currentRating == 0) {
-                    // Pulse the hint to remind user to rate or skip
-                    tvRatingLabel.animate().alpha(0.2f).setDuration(150)
-                        .withEndAction(() -> tvRatingLabel.animate().alpha(1f).setDuration(150));
+                    // Pulse hint to prompt user
+                    tvRatingLabel.animate().alpha(0.2f).setDuration(120)
+                        .withEndAction(() -> tvRatingLabel.animate().alpha(1f).setDuration(120));
                     return true;
                 }
-                saveAndAdvance(currentRating);
+                confirmAndAdvance(currentRating, 0);
                 return true;
 
+            /*case KeyEvent.KEYCODE_BACK:
+                // Back navigation disabled in v0.4
+                return true;*/
             case KeyEvent.KEYCODE_BACK:
                 if (currentIndex > 0) {
-                    questions.get(currentIndex).setRating(currentRating);
+                    // Reculer d'une question
                     currentIndex--;
                     showQuestion(currentIndex);
-                    return true;
+
+                    // Optionnel : Restaurer la note précédemment saisie
+                    currentRating = ratings[currentIndex];
+                    updateStars();
+                } else {
+                    // On est à la première question : on retourne explicitement au Welcome
+                    Intent intent = new Intent(this, WelcomeActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(intent);
+                    finish(); // On ferme SurveyActivity
                 }
-                break;
+                return true;
         }
         return super.dispatchKeyEvent(event);
     }
 
-    private void saveAndAdvance(int rating) {
-        questions.get(currentIndex).setRating(rating);
-        if (currentIndex < questions.size() - 1) {
+    private void confirmAndAdvance(int rating, int skip) {
+        ratings[currentIndex] = rating;
+        skipped[currentIndex] = skip;
+
+        if (currentIndex < TOTAL - 1) {
             currentIndex++;
             showQuestion(currentIndex);
         } else {
@@ -198,25 +183,28 @@ public class SurveyActivity extends AppCompatActivity {
     }
 
     private void submitAndFinish() {
-        startActivity(new Intent(this, ThankYouActivity.class));
+        Intent intent = new Intent(this, ThankYouActivity.class);
+        intent.putExtra(ThankYouActivity.EXTRA_GUEST, guest);
+        startActivity(intent);
         finish();
 
-        List<QuestionResponse> responses = new ArrayList<>();
-        for (Question q : questions) {
-            responses.add(new QuestionResponse(
-                q.getId(), q.getCategory(), q.getSubcategory(),
-                q.getText(), q.getRating(), q.isSkipped()
-            ));
-        }
+        // Build flat result and submit in background
+        SurveyResult result = new SurveyResult();
+        result.device_id     = DeviceUtils.getDeviceId(this);
+        result.ip_chambre    = (guest != null) ? guest.ip_chambre    : "";
+        result.num_chambre   = (guest != null) ? guest.num_chambre   : "";
+        result.nom_client    = (guest != null) ? guest.nom_client    : "";
+        result.prenom_client = (guest != null) ? guest.prenom_client : "";
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
-        sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
-        String deviceId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+        result.q1_room_rating  = ratings[0]; result.q1_room_skipped  = skipped[0];
+        result.q2_fd_rating    = ratings[1]; result.q2_fd_skipped    = skipped[1];
+        result.q3_bk_rating    = ratings[2]; result.q3_bk_skipped    = skipped[2];
+        result.q4_spa_rating   = ratings[3]; result.q4_spa_skipped   = skipped[3];
+        result.q5_ov_rating    = ratings[4]; result.q5_ov_skipped    = skipped[4];
 
-        SurveyResult result = new SurveyResult(sdf.format(new Date()), deviceId, responses);
-        ApiClient.getService().submitSurvey(result).enqueue(new Callback<Void>() {
-            @Override public void onResponse(Call<Void> call, Response<Void> r) { }
-            @Override public void onFailure(Call<Void> call, Throwable t) { }
+        ApiClient.getService().submitSurvey(result).enqueue(new Callback<SubmitResponse>() {
+            @Override public void onResponse(Call<SubmitResponse> call, Response<SubmitResponse> r) {}
+            @Override public void onFailure(Call<SubmitResponse> call, Throwable t) {}
         });
     }
 }

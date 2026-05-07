@@ -1,0 +1,4 @@
+com.hotel.survey.test.app-androidTest-0 C:\HotelSurveyApp\app\build\generated\res\resValues\androidTest\debug
+com.hotel.survey.test.app-mergeDebugAndroidTestResources-1 C:\HotelSurveyApp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.hotel.survey.test.app-mergeDebugAndroidTestResources-2 C:\HotelSurveyApp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.hotel.survey.test.app-debugAndroidTest-3 C:\HotelSurveyApp\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

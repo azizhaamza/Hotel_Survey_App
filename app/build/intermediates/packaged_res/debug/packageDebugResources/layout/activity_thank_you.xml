@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_hasdrubal_logo"
+            android:src="@drawable/logo_hasdrubal_w"
             android:contentDescription="Hasdrubal Logo" />
 
         <TextView
@@ -91,6 +91,17 @@
             android:background="@color/divider"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/tv_guest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gold"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone" />
 
         <TextView
             android:layout_width="wrap_content"

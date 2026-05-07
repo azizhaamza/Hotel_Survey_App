@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:2:1-52:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\hp\.gradle\caches\9.0.0\transforms\521a715e94138ab804e2e688855d95cf\transformed\constraintlayout-2.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\hp\.gradle\caches\9.0.0\transforms\68a39af4109abeecf4ed17a26c67b837\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\hp\.gradle\caches\9.0.0\transforms\32e0c510831c94d69477ef010285304d\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -46,21 +46,29 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:4:5-67
 	android:name
 		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:5:5-76
+	android:name
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:5:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:6:22-76
 uses-feature#android.hardware.touchscreen
-ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:5:5-90
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:8:5-90
 	android:required
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:5:63-87
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:8:63-87
 	android:name
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:5:19-62
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:8:19-62
 uses-feature#android.software.leanback
-ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:6:5-87
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:9:5-87
 	android:required
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:6:60-84
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:9:60-84
 	android:name
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:6:19-59
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:9:19-59
 application
-ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:8:5-38:19
-INJECTED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:8:5-38:19
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:11:5-50:19
+INJECTED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:11:5-50:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\hp\.gradle\caches\9.0.0\transforms\521a715e94138ab804e2e688855d95cf\transformed\constraintlayout-2.2.0\AndroidManifest.xml:7:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\hp\.gradle\caches\9.0.0\transforms\521a715e94138ab804e2e688855d95cf\transformed\constraintlayout-2.2.0\AndroidManifest.xml:7:5-20
 MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\hp\.gradle\caches\9.0.0\transforms\122198a4f3dd9ed9acf77df606380ad4\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
@@ -80,48 +88,44 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\hp
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] C:\Users\hp\.gradle\caches\9.0.0\transforms\4a5dcce0cc4d70d67cd6d6d67c248c3c\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:11:9-36
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:16:9-36
 	android:label
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:15:9-41
+	android:roundIcon
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:14:9-54
+	android:icon
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:12:9-36
 	android:theme
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:12:9-49
-activity#com.hotel.survey.WelcomeActivity
-ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:14:9-24:20
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:18:9-49
+	android:usesCleartextTraffic
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:17:9-44
+activity#com.hotel.survey.SplashActivity
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:20:9-30:20
 	android:screenOrientation
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:17:13-50
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:23:13-50
 	android:exported
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:16:13-36
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:22:13-36
 	android:configChanges
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:18:13-59
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:24:13-59
 	android:name
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:15:13-44
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:21:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER+category:name:android.intent.category.LEANBACK_LAUNCHER
-ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:27:27-74
 category#android.intent.category.LEANBACK_LAUNCHER
-ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:22:17-86
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:28:17-86
 	android:name
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:22:27-83
-activity#com.hotel.survey.SurveyActivity
-ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:26:9-30:62
-	android:screenOrientation
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:29:13-50
-	android:exported
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:28:13-37
-	android:configChanges
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:30:13-59
-	android:name
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:27:13-43
-activity#com.hotel.survey.ThankYouActivity
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:28:27-83
+activity#com.hotel.survey.WelcomeActivity
 ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:32:9-36:62
 	android:screenOrientation
 		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:35:13-50
@@ -130,7 +134,27 @@ ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:32:9-36:62
 	android:configChanges
 		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:36:13-59
 	android:name
-		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:33:13-45
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:33:13-44
+activity#com.hotel.survey.SurveyActivity
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:38:9-42:62
+	android:screenOrientation
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:41:13-50
+	android:exported
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:40:13-37
+	android:configChanges
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:42:13-59
+	android:name
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:39:13-43
+activity#com.hotel.survey.ThankYouActivity
+ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:44:9-48:62
+	android:screenOrientation
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:47:13-50
+	android:exported
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:46:13-37
+	android:configChanges
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:48:13-59
+	android:name
+		ADDED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml:45:13-45
 uses-sdk
 INJECTED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\HotelSurveyApp\app\src\main\AndroidManifest.xml
