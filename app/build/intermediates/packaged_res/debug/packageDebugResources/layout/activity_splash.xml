@@ -9,10 +9,10 @@
     android:padding="48dp">
 
     <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/logo_hasdrubal_w"
-        android:contentDescription="Hasdrubal Logo" />
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/logo_palace_royal"
+        android:contentDescription="palace royal Logo" />
 
     <TextView
         android:layout_width="wrap_content"

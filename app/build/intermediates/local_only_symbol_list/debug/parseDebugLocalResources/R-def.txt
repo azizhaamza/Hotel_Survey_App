@@ -16,6 +16,8 @@ color white
 drawable ic_launcher_background
 drawable img
 drawable logo_hasdrubal_w
+drawable logo_hotel_survey_application3
+drawable logo_palace_royal
 id btn_maybe_later
 id btn_never
 id btn_retry

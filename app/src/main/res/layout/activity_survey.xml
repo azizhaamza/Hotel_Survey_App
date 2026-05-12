@@ -17,10 +17,10 @@
         android:paddingEnd="20dp">
 
         <ImageView
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:src="@drawable/logo_hasdrubal_w"
-            android:contentDescription="Logo" />
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/logo_palace_royal"
+            android:contentDescription="palace royal Logo" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="HASDRUBAL THALASSA &amp; Spa"
+                android:text="Santa Cruz de La Palma &amp; Spa"
                 android:textColor="@color/gold"
                 android:textSize="13sp"
                 android:textStyle="bold" />

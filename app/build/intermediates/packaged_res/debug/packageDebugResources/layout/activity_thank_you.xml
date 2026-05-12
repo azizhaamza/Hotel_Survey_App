@@ -17,17 +17,17 @@
         android:padding="32dp">
 
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/logo_hasdrubal_w"
-            android:contentDescription="Hasdrubal Logo" />
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_palace_royal"
+            android:contentDescription="palace royal Logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hotel_name"
             android:textColor="@color/gold"
-            android:textSize="16sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_marginTop="16dp" />
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="@string/hotel_location"
             android:textColor="@color/hasdrubal_blue_light"
-            android:textSize="12sp"
+            android:textSize="20sp"
             android:textAllCaps="true"
             android:letterSpacing="0.15"
             android:layout_marginTop="4dp" />

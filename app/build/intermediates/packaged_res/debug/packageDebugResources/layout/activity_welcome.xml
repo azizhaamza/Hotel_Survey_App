@@ -22,17 +22,17 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="180dp"
-                android:layout_height="140dp"
-                android:src="@drawable/logo_hasdrubal_w"
-                android:contentDescription="Hasdrubal Logo" />
+                android:layout_width="170dp"
+                android:layout_height="150dp"
+                android:src="@drawable/logo_palace_royal"
+                android:contentDescription="palce royal Logo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hotel_name"
                 android:textColor="@color/gold"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:layout_marginTop="10dp" />
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/hotel_location"
                 android:textColor="@color/hasdrubal_blue_light"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:textAllCaps="true"
                 android:letterSpacing="0.15"
                 android:layout_marginTop="5dp" />
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:text="Guest Satisfaction\nSurvey"
                 android:textColor="@color/text_secondary"
-                android:textSize="13sp"
+                android:textSize="14sp"
                 android:gravity="center"
                 android:lineSpacingExtra="4dp" />
 
@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/skip_color"
-                android:textSize="10sp"
+                android:textSize="12sp"
                 android:gravity="center"
                 android:layout_marginTop="20dp" />
 

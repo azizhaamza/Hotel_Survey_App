@@ -923,6 +923,8 @@ drawable ic_call_decline_low
 drawable ic_launcher_background
 drawable img
 drawable logo_hasdrubal_w
+drawable logo_hotel_survey_application3
+drawable logo_palace_royal
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
