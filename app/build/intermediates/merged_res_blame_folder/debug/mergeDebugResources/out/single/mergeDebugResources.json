@@ -1,134 +1,130 @@
 [
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\layout_activity_welcome.xml.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\layout\\activity_welcome.xml"
+        "merged": "com.hotel.survey.app-debug-4:/drawable-hdpi_logo_hasdrubal_w.png.flat",
+        "source": "com.hotel.survey.app-pngs-0:/drawable-hdpi/logo_hasdrubal_w.png"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "com.hotel.survey.app-debug-4:/layout_activity_welcome.xml.flat",
+        "source": "com.hotel.survey.app-main-6:/layout/activity_welcome.xml"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\layout_activity_thank_you.xml.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\layout\\activity_thank_you.xml"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable-xxhdpi_logo_hasdrubal_w.png.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-pngs-0:\\drawable-xxhdpi\\logo_hasdrubal_w.png"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable-xxxhdpi_logo_hasdrubal_w.png.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-pngs-0:\\drawable-xxxhdpi\\logo_hasdrubal_w.png"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+        "merged": "com.hotel.survey.app-debug-4:/drawable-xxxhdpi_logo_hasdrubal_w.png.flat",
+        "source": "com.hotel.survey.app-pngs-0:/drawable-xxxhdpi/logo_hasdrubal_w.png"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable-hdpi_logo_hasdrubal_w.png.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-pngs-0:\\drawable-hdpi\\logo_hasdrubal_w.png"
+        "merged": "com.hotel.survey.app-debug-4:/drawable_img.png.flat",
+        "source": "com.hotel.survey.app-main-6:/drawable/img.png"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+        "merged": "com.hotel.survey.app-debug-4:/drawable-anydpi-v24_logo_hasdrubal_w.xml.flat",
+        "source": "com.hotel.survey.app-pngs-0:/drawable-anydpi-v24/logo_hasdrubal_w.xml"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable-anydpi-v24_logo_hasdrubal_w.xml.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-pngs-0:\\drawable-anydpi-v24\\logo_hasdrubal_w.xml"
+        "merged": "com.hotel.survey.app-debug-4:/drawable-mdpi_logo_hasdrubal_w.png.flat",
+        "source": "com.hotel.survey.app-pngs-0:/drawable-mdpi/logo_hasdrubal_w.png"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable_logo_hotel_survey_application3.png.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\drawable\\logo_hotel_survey_application3.png"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-xxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\layout_activity_splash.xml.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\layout\\activity_splash.xml"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\layout_activity_survey.xml.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\layout\\activity_survey.xml"
+        "merged": "com.hotel.survey.app-debug-4:/layout_activity_splash.xml.flat",
+        "source": "com.hotel.survey.app-main-6:/layout/activity_splash.xml"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable_logo_palace_royal.png.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\drawable\\logo_palace_royal.png"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "com.hotel.survey.app-debug-4:/drawable_logo_hotel_survey_application3.png.flat",
+        "source": "com.hotel.survey.app-main-6:/drawable/logo_hotel_survey_application3.png"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+        "merged": "com.hotel.survey.app-debug-4:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.hotel.survey.app-main-6:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable_img.png.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\drawable\\img.png"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable-ldpi_logo_hasdrubal_w.png.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-pngs-0:\\drawable-ldpi\\logo_hasdrubal_w.png"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable-xhdpi_logo_hasdrubal_w.png.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-pngs-0:\\drawable-xhdpi\\logo_hasdrubal_w.png"
-    },
-    {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "com.hotel.survey.app-debug-4:/drawable_logo_palace_royal.png.flat",
+        "source": "com.hotel.survey.app-main-6:/drawable/logo_palace_royal.png"
     },
     {
         "merged": "com.hotel.survey.app-debug-4:/layout_activity_thank_you.xml.flat",
         "source": "com.hotel.survey.app-main-6:/layout/activity_thank_you.xml"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable-mdpi_logo_hasdrubal_w.png.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-pngs-0:\\drawable-mdpi\\logo_hasdrubal_w.png"
+        "merged": "com.hotel.survey.app-debug-4:/layout_activity_survey.xml.flat",
+        "source": "com.hotel.survey.app-main-6:/layout/activity_survey.xml"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "com.hotel.survey.app-debug-4:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.hotel.survey.app-main-6:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+        "merged": "com.hotel.survey.app-debug-4:/drawable-xxhdpi_logo_hasdrubal_w.png.flat",
+        "source": "com.hotel.survey.app-pngs-0:/drawable-xxhdpi/logo_hasdrubal_w.png"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\drawable\\ic_launcher_background.xml"
+        "merged": "com.hotel.survey.app-debug-4:/drawable-ldpi_logo_hasdrubal_w.png.flat",
+        "source": "com.hotel.survey.app-pngs-0:/drawable-ldpi/logo_hasdrubal_w.png"
     },
     {
-        "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
+        "merged": "com.hotel.survey.app-debug-4:/drawable-xhdpi_logo_hasdrubal_w.png.flat",
+        "source": "com.hotel.survey.app-pngs-0:/drawable-xhdpi/logo_hasdrubal_w.png"
     }
 ]
