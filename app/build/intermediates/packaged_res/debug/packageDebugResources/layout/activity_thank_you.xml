@@ -19,15 +19,15 @@
         <ImageView
             android:layout_width="170dp"
             android:layout_height="150dp"
-            android:src="@drawable/logo_palace_royal"
-            android:contentDescription="palace royal Logo" />
+            android:src="@drawable/logo_hasdrubal_w"
+            android:contentDescription="hasdrubal Logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hotel_name"
             android:textColor="@color/gold"
-            android:textSize="22sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_marginTop="16dp" />
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="@string/hotel_location"
             android:textColor="@color/hasdrubal_blue_light"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textAllCaps="true"
             android:letterSpacing="0.15"
             android:layout_marginTop="4dp" />
@@ -68,7 +68,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thank You!"
+            android:text="Merci !"
             android:textColor="@color/white"
             android:textSize="44sp"
             android:textStyle="bold"
@@ -78,7 +78,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your satisfaction is our priority."
+            android:text="Votre satisfaction est notre priorité."
             android:textColor="@color/gold"
             android:textSize="18sp"
             android:textStyle="italic"
@@ -106,7 +106,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your feedback has been recorded.\nWe hope to welcome you again soon."
+            android:text="Votre avis a bien été enregistré.\nNous espérons vous accueillir de nouveau très bientôt."
             android:textColor="@color/text_secondary"
             android:textSize="18sp"
             android:gravity="center"
@@ -115,7 +115,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="This window will close automatically in 5 seconds..."
+            android:text="Cette fenêtre se fermera automatiquement dans 5 secondes..."
             android:textColor="@color/skip_color"
             android:textSize="13sp"
             android:layout_marginTop="36dp" />

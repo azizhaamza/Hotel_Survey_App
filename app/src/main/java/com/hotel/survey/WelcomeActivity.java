@@ -51,7 +51,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     tvGuestName.setVisibility(View.VISIBLE);
                 }
                 if (!room.isEmpty()) {
-                    tvRoomNumber.setText("Room  " + room);
+                    tvRoomNumber.setText("Chambre  " + room);
                     tvRoomNumber.setVisibility(View.VISIBLE);
                 }
             }

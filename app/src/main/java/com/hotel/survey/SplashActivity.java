@@ -38,16 +38,16 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void startLookup() {
-        showLoading("Identifying your room...");
+        showLoading("Identification de votre chambre...");
 
         String ip = NetworkUtils.getActiveIp(this);
 
         if (ip == null || ip.isEmpty()) {
-            showError("No network connection.\nPlease check the TV network cable or WiFi.");
+            showError("Aucune connexion réseau.\n" + "Veuillez vérifier le câble Ethernet ou la connexion Wi-Fi de votre téléviseur.");
             return;
         }
 
-        tvStatus.setText("Room lookup for IP: " + ip);
+        tvStatus.setText("Identification de la chambre... : " + ip);
 
         ApiClient.getService().getGuest(ip).enqueue(new Callback<GuestInfo>() {
             @Override
@@ -57,13 +57,13 @@ public class SplashActivity extends AppCompatActivity {
                     guest.ip_chambre = ip;
                     launchSurvey(guest);
                 } else {
-                    showError("Server error (" + response.code() + ").\nPlease contact reception.");
+                    showError("Erreur serveur (" + response.code() + ").\nVeuillez contacter la réception.");
                 }
             }
 
             @Override
             public void onFailure(Call<GuestInfo> call, Throwable t) {
-                showError("Cannot reach server.\nPlease contact reception.");
+                showError("Impossible de joindre le serveur.\\nVeuillez contacter la réception.");
             }
         });
     }

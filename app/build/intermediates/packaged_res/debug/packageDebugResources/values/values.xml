@@ -13,9 +13,9 @@
     <color name="star_filled">#C4A44D</color>
     <color name="text_secondary">#7A9BB5</color>
     <color name="white">#FFFFFF</color>
-    <string name="app_name">Hotel Guest Survey</string>
-    <string name="hotel_location">Bresil</string>
-    <string name="hotel_name">Santa Cruz de La Palma &amp; Spa</string>
+    <string name="app_name">Hasdrubal Survey</string>
+    <string name="hotel_location">YASMINE HAMMAMET</string>
+    <string name="hotel_name">HASDRUBAL THALASSA &amp; Spa</string>
     <style name="Theme.HotelSurvey" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@color/background_dark</item>
         <item name="android:statusBarColor">@color/background_dark</item>

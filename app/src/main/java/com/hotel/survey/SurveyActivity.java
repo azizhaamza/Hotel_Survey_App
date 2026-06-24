@@ -24,11 +24,13 @@ public class SurveyActivity extends AppCompatActivity {
 
     public static final String EXTRA_GUEST = "extra_guest";
 
-    private static final String[] RATING_LABELS =
-            {"", "Inadequate", "Average", "Good", "Very Good", "Excellent"};
+    /*private static final String[] RATING_LABELS =
+            {"", "Inadequate", "Average", "Good", "Very Good", "Excellent"};*/
 
+    private static final String[] RATING_LABELS =
+            {"", "Insuffisant", "Moyen", "Bon", "Très bon", "Excellent"};
     // 5 hardcoded questions per CDC v0.4
-    private static final String[] CATEGORIES =
+   /* private static final String[] CATEGORIES =
             {"YOUR ROOM", "FRONT DESK", "BREAKFAST", "SPA CENTER", "OVERALL STAY"};
     private static final String[] QUESTIONS = {
             "How do you rate your room?",
@@ -36,8 +38,32 @@ public class SurveyActivity extends AppCompatActivity {
             "How do you rate the breakfast?",
             "How do you rate the Spa Center?",
             "How do you rate your overall stay?"
+    };*/
+    // Questions codées en dur avec la Réception en premier
+    private static final String[] CATEGORIES = {
+            "RÉCEPTION",
+            "VOTRE CHAMBRE",
+            "PETIT-DÉJEUNER",
+            "RESTAURANTS",
+            "ROOM SERVICE",
+            "CENTRE SPA / THALASSO",
+            "BLANCHISSERIE",
+            "SERVICE INTERNET",
+            "SÉJOUR GLOBAL"
     };
-    private static final int TOTAL = 5;
+
+    private static final String[] QUESTIONS = {
+            "Comment évaluez-vous l’accueil à la réception ?",
+            "Comment évaluez-vous le confort de votre chambre ?",
+            "Comment évaluez-vous le petit-déjeuner ?",
+            "Comment évaluez-vous les restaurants de l’hôtel en général ?",
+            "Comment évaluez-vous le service en chambre (Room Service) ?",
+            "Comment évaluez-vous le centre de thalassothérapie / Spa ?",
+            "Comment évaluez-vous le service de blanchisserie ?",
+            "Comment évaluez-vous la qualité de notre service internet ?",
+            "Comment évaluez-vous globalement votre séjour ?"
+    };
+    private static final int TOTAL = 8;
 
     private int currentIndex = 0;
     private int currentRating = 0;
@@ -78,7 +104,7 @@ public class SurveyActivity extends AppCompatActivity {
         if (guest != null && guest.found) {
             String name = guest.getDisplayName();
             String room = guest.num_chambre != null ? guest.num_chambre : "";
-            String header = name.isEmpty() ? "Room " + room : name + "  —  Room " + room;
+            String header = name.isEmpty() ? "Chambre " + room : name + "  —  Chambre " + room;
             tvGuestHeader.setText(header);
         }
 
@@ -96,7 +122,7 @@ public class SurveyActivity extends AppCompatActivity {
         tvQuestion.setText(QUESTIONS[index]);
 
         boolean isLast = (index == TOTAL - 1);
-        tvHint.setText("◄ ► select rating   |   " + (isLast ? "OK → submit" : "OK → next") + "   |   ↑ skip");
+        tvHint.setText("◄ ► Choisir la note   |   " + (isLast ? "OK → Envoyer" : "OK → Suivant") + "   |   ↑ Ignorer");
 
         updateStars();
     }
@@ -109,7 +135,7 @@ public class SurveyActivity extends AppCompatActivity {
                 filled ? R.color.star_filled : R.color.star_empty));
         }
         if (currentRating == 0) {
-            tvRatingLabel.setText("Press ↑ to skip");
+            tvRatingLabel.setText("Appuyez sur ↑ pour ignorer");
             tvRatingLabel.setTextColor(ContextCompat.getColor(this, R.color.skip_color));
         } else {
             tvRatingLabel.setText(RATING_LABELS[currentRating]);

@@ -79,8 +79,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\hp\Downloads\logo_survey_application.png" />
-                                                <entry key="scalingPercent" value="66" />
+                                                <entry key="imagePath" value="C:\Users\hp\Desktop\iti _group\logo hasdrubal_guest_survey_tv.png" />
+                                                <entry key="scalingPercent" value="68" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -152,6 +152,11 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="previewDensity" value="xxhdpi" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -315,6 +320,11 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="previewDensity" value="xxhdpi" />
                                     </map>
                                   </option>
                                 </PersistentState>
