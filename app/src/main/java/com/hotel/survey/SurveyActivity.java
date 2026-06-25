@@ -30,7 +30,7 @@ public class SurveyActivity extends AppCompatActivity {
     private static final String[] RATING_LABELS =
             {"", "Insuffisant", "Moyen", "Bon", "Très bon", "Excellent"};
     // 5 hardcoded questions per CDC v0.4
-   /* private static final String[] CATEGORIES =
+    /*private static final String[] CATEGORIES =
             {"YOUR ROOM", "FRONT DESK", "BREAKFAST", "SPA CENTER", "OVERALL STAY"};
     private static final String[] QUESTIONS = {
             "How do you rate your room?",
@@ -64,6 +64,8 @@ public class SurveyActivity extends AppCompatActivity {
             "Comment évaluez-vous globalement votre séjour ?"
     };
     private static final int TOTAL = 8;
+
+
 
     private int currentIndex = 0;
     private int currentRating = 0;
@@ -104,7 +106,9 @@ public class SurveyActivity extends AppCompatActivity {
         if (guest != null && guest.found) {
             String name = guest.getDisplayName();
             String room = guest.num_chambre != null ? guest.num_chambre : "";
-            String header = name.isEmpty() ? "Chambre " + room : name + "  —  Chambre " + room;
+
+            //String header = name.isEmpty() ? "Chambre " + room : name + "  —  Chambre " + room;
+            String header = getString(R.string.header_with_name, name, room);
             tvGuestHeader.setText(header);
         }
 
@@ -122,8 +126,12 @@ public class SurveyActivity extends AppCompatActivity {
         tvQuestion.setText(QUESTIONS[index]);
 
         boolean isLast = (index == TOTAL - 1);
-        tvHint.setText("◄ ► Choisir la note   |   " + (isLast ? "OK → Envoyer" : "OK → Suivant") + "   |   ↑ Ignorer");
-
+        //tvHint.setText("◄ ► Choisir la note   |   " + (isLast ? "OK → Envoyer" : "OK → Suivant") + "   |   ↑ Ignorer");
+        if (isLast) {
+            tvHint.setText(getString(R.string.hint_survey_submit));
+        } else {
+            tvHint.setText(getString(R.string.hint_survey_next));
+        }
         updateStars();
     }
 
@@ -135,7 +143,8 @@ public class SurveyActivity extends AppCompatActivity {
                 filled ? R.color.star_filled : R.color.star_empty));
         }
         if (currentRating == 0) {
-            tvRatingLabel.setText("Appuyez sur ↑ pour ignorer");
+            //tvRatingLabel.setText("Appuyez sur ↑ pour ignorer");
+            tvRatingLabel.setText(getString(R.string.rating_ignore_hint));
             tvRatingLabel.setTextColor(ContextCompat.getColor(this, R.color.skip_color));
         } else {
             tvRatingLabel.setText(RATING_LABELS[currentRating]);
@@ -188,6 +197,9 @@ public class SurveyActivity extends AppCompatActivity {
                     // On est à la première question : on retourne explicitement au Welcome
                     Intent intent = new Intent(this, WelcomeActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    // CORRECTION ICI : Il faut remettre l'objet guest pour que WelcomeActivity puisse le lire !
+                    // (Assurez-vous que la variable 'guest' existe bien dans votre SurveyActivity)
+                    intent.putExtra(WelcomeActivity.EXTRA_GUEST, guest);
                     startActivity(intent);
                     finish(); // On ferme SurveyActivity
                 }

@@ -3,4 +3,19 @@
     <string name="app_name">Hasdrubal Survey</string>
     <string name="hotel_name">HASDRUBAL THALASSA &amp; Spa</string>
     <string name="hotel_location">YASMINE HAMMAMET</string>
+    <string name="identification_ip">identification de la chambre...</string>
+    <string name="ressayer">Réessayer</string>
+    <string name="enquete">Enquête de satisfaction</string>
+    <string name="message_bienvenu">Bienvenue !</string>
+    <string name="slogan">Votre satisfaction est notre priorité.</string>
+    <string name="start_button">Commencer</string>
+    <string name="after_button">Plus tard</string>
+    <string name="never_button">Jamais</string>
+    <string name="navigation">◄ ► Naviguer   |   OK pour Confirmer</string>
+    <string name="room_text_format">Chambrre : %1$s</string>
+    <string name="header_with_name">%1$s  —  Chambre %2$s</string>
+    <string name="hint_survey_next">◄ ► Choisir la note   |   OK → Suivant   |   ↑ Ignorer</string>
+    <string name="hint_survey_submit">◄ ► Choisir la note   |   OK → Envoyer   |   ↑ Ignorer</string>
+    <string name="rating_ignore_hint">Appuyez sur ↑ pour ignorer</string>
 </resources>
+

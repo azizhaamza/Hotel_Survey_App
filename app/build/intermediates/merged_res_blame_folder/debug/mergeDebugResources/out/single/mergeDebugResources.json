@@ -104,10 +104,6 @@
         "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.hotel.survey.app-debug-4:/layout_activity_thank_you.xml.flat",
-        "source": "com.hotel.survey.app-main-6:/layout/activity_thank_you.xml"
-    },
-    {
         "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
@@ -122,6 +118,10 @@
     {
         "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.hotel.survey.app-debug-4:/layout_activity_survey.xml.flat",
+        "source": "com.hotel.survey.app-main-6:/layout/activity_survey.xml"
     },
     {
         "merged": "C:\\Users\\hp\\.gradle\\daemon\\9.0.0\\com.hotel.survey.app-debug-4:\\drawable_ic_launcher_background.xml.flat",
