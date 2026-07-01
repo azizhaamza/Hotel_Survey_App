@@ -1,29 +1,20 @@
 package com.hotel.survey.model;
 
+import java.util.List;
+
+/**
+ * Payload envoyé à api/submit.php.
+ * Remplace les anciens champs q1_room_rating…q5_ov_rating
+ * par une liste dynamique compatible avec n'importe quel nombre de questions.
+ */
 public class SurveyResult {
+    public String device_id;
     public String ip_chambre;
     public String num_chambre;
     public String nom_client;
     public String prenom_client;
-    public String device_id;
+    public String langue;
 
-    // Q1 — YOUR ROOM
-    public int q1_room_rating;
-    public int q1_room_skipped;
-
-    // Q2 — FRONT DESK
-    public int q2_fd_rating;
-    public int q2_fd_skipped;
-
-    // Q3 — BREAKFAST
-    public int q3_bk_rating;
-    public int q3_bk_skipped;
-
-    // Q4 — SPA CENTER
-    public int q4_spa_rating;
-    public int q4_spa_skipped;
-
-    // Q5 — OVERALL STAY
-    public int q5_ov_rating;
-    public int q5_ov_skipped;
+    /** Liste des réponses, une par question affichée. */
+    public List<QuestionResult> reponses;
 }

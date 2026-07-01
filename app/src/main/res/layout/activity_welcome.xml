@@ -55,6 +55,7 @@
                 android:layout_marginBottom="24dp" />
 
             <TextView
+                android:id="@+id/tv_enquete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/enquete"
@@ -103,6 +104,7 @@
         android:paddingBottom="24dp">
 
         <TextView
+            android:id="@+id/tv_welcome_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/message_bienvenu"
@@ -136,6 +138,7 @@
             android:visibility="gone" />
 
         <TextView
+            android:id="@+id/tv_slogan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/slogan"
@@ -202,6 +205,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_navigation_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/navigation"

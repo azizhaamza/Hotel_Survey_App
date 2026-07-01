@@ -1,154 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/background_dark">
 
-    <!-- HEADER BAR -->
+    <!-- ─── ÉCRAN DE CHARGEMENT DES QUESTIONS ──────────────────────────── -->
     <LinearLayout
+        android:id="@+id/layout_loading"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="@color/bg_card"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible">
 
-        <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:src="@drawable/logo_hasdrubal_w"
-            android:contentDescription="hasdrubal Logo" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginStart="12dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hotel_name"
-                android:textColor="@color/gold"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_guest_header"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"
-                android:textSize="11sp"
-                android:layout_marginTop="1dp" />
-
-        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progress_questions"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:indeterminateTint="@color/gold" />
 
         <TextView
-            android:id="@+id/tv_question_number"
+            android:id="@+id/tv_loading_msg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/text_secondary"
-            android:textSize="13sp" />
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btn_retry_questions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ressayer"
+            android:textColor="@color/background_dark"
+            android:backgroundTint="@color/gold"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            android:focusable="true" />
 
     </LinearLayout>
 
-    <!-- PROGRESS BAR -->
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:progressTint="@color/gold"
-        android:progressBackgroundTint="@color/star_empty" />
-
-    <!-- BODY: category + question + stars -->
+    <!-- ─── ÉCRAN DU SONDAGE ──────────────────────────────────────────── -->
     <LinearLayout
+        android:id="@+id/layout_survey"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
-        android:padding="32dp">
+        android:visibility="gone">
 
-        <TextView
-            android:id="@+id/tv_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/hasdrubal_blue_light"
-            android:textSize="13sp"
-            android:textAllCaps="true"
-            android:letterSpacing="0.15"
-            android:background="@color/bg_card"
-            android:paddingStart="14dp"
-            android:paddingEnd="14dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp" />
-
-        <TextView
-            android:id="@+id/tv_question"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:lineSpacingExtra="6dp"
-            android:layout_marginTop="20dp" />
-
+        <!-- HEADER BAR -->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
             android:orientation="horizontal"
-            android:layout_marginTop="32dp">
+            android:gravity="center_vertical"
+            android:background="@color/bg_card"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
 
-            <TextView android:id="@+id/star1"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:textSize="64sp" android:padding="8dp" android:focusable="false" />
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/logo_hasdrubal_w"
+                android:contentDescription="hasdrubal Logo" />
 
-            <TextView android:id="@+id/star2"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:textSize="64sp" android:padding="8dp" android:focusable="false" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
 
-            <TextView android:id="@+id/star3"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:textSize="64sp" android:padding="8dp" android:focusable="false" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hotel_name"
+                    android:textColor="@color/gold"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
-            <TextView android:id="@+id/star4"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:textSize="64sp" android:padding="8dp" android:focusable="false" />
+                <TextView
+                    android:id="@+id/tv_guest_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="11sp"
+                    android:layout_marginTop="1dp" />
 
-            <TextView android:id="@+id/star5"
-                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                android:textSize="64sp" android:padding="8dp" android:focusable="false" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_question_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
 
         </LinearLayout>
 
+        <!-- BARRE DE PROGRESSION -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:progressTint="@color/gold"
+            android:progressBackgroundTint="@color/star_empty" />
+
+        <!-- CORPS : catégorie + question + étoiles -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp">
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/hasdrubal_blue_light"
+                android:textSize="13sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.15"
+                android:background="@color/bg_card"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp" />
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginTop="20dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="32dp">
+
+                <TextView android:id="@+id/star1"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="64sp" android:padding="8dp" android:focusable="false" />
+
+                <TextView android:id="@+id/star2"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="64sp" android:padding="8dp" android:focusable="false" />
+
+                <TextView android:id="@+id/star3"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="64sp" android:padding="8dp" android:focusable="false" />
+
+                <TextView android:id="@+id/star4"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="64sp" android:padding="8dp" android:focusable="false" />
+
+                <TextView android:id="@+id/star5"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textSize="64sp" android:padding="8dp" android:focusable="false" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_rating_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="12dp" />
+
+        </LinearLayout>
+
+        <!-- HINT BAS DE PAGE -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
         <TextView
-            android:id="@+id/tv_rating_label"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_hint"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginTop="12dp" />
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:padding="12dp" />
 
     </LinearLayout>
 
-    <!-- BOTTOM HINT -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/divider" />
-
-    <TextView
-        android:id="@+id/tv_hint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/text_secondary"
-        android:textSize="12sp"
-        android:gravity="center"
-        android:padding="12dp" />
-
-</LinearLayout>
+</FrameLayout>
